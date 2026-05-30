@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Cityscape Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="controls">
+            <h1>Cityscape Gen</h1>
+            <p class="subtitle">Procedural Art Creator</p>
+
+            <div class="control-group">
+                <label for="density">Building Density: <span id="densityVal">100</span></label>
+                <input type="range" id="density" min="20" max="200" value="100">
+            </div>
+
+            <div class="control-group">
+                <label for="maxHeight">Max Height: <span id="heightVal">70</span>%</label>
+                <input type="range" id="maxHeight" min="30" max="95" value="70">
+            </div>
+
+            <div class="control-group">
+                <label for="theme">Time of Day</label>
+                <select id="theme">
+                    <option value="midnight">Midnight</option>
+                    <option value="sunset">Cyber Sunset</option>
+                    <option value="toxic">Toxic Wasteland</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="generateBtn" class="primary-btn">Generate New City</button>
+                <button id="downloadBtn" class="secondary-btn">Export PNG</button>
+            </div>
+        </aside>
+
+        <main class="canvas-container">
+            <canvas id="cityCanvas"></canvas>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
